@@ -1,0 +1,15 @@
+StaticBody2D
+CollisionShape2D
+CollisionPolygon2D
+Area2D
+AnimatedSprite2D
+CharacterBody2D
+TileMapLayer
+CanvasLayer
+CanvasGroup
+Timer
+NavigationRegion2D
+Node2D
+NavigationAgent2D
+Label      - Matches the "text" keyword.
+GPUParticles2D

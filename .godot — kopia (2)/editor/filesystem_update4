@@ -1,0 +1,8 @@
+res://player.tscn
+res://test.tscn
+res://global.gd
+res://player.gd
+res://bg.gd
+res://finish.gd
+res://finish.tscn
+res://pathfinding_thingi.tscn
