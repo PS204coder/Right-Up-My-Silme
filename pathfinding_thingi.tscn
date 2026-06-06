@@ -28,7 +28,6 @@ texture = ExtResource("2_veq8r")
 path_desired_distance = 10.0
 target_desired_distance = 3.0
 path_max_distance = 200.0
-debug_enabled = true
 
 [node name="Timer" type="Timer" parent="." unique_id=1929421014]
 wait_time = 0.1

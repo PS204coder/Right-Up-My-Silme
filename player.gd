@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 	if not is_on_floor() and Global.player_died == false:
 		velocity += get_gravity() * delta * gravity_changer
 		jumping = false
-	
+	print(animations.frame)
 	if is_on_floor():
 		wall_jump_available = 1
 	if animations.animation == "jump" and is_on_floor() and animations.is_playing() == false and Global.player_died == false:
@@ -50,7 +50,9 @@ func _process(delta: float) -> void:
 			animations.play("right")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		if is_on_floor() and animations.animation != "jump" and Global.player_died == false:
+		if is_on_floor() and animations.animation == "jump" and animations.is_playing() == true and  Global.player_died == false:
+			animations.play("idle")
+		elif is_on_floor() and animations.animation != "jump" and Global.player_died == false:
 			animations.play("idle")
 
 	
