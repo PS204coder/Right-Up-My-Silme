@@ -4,7 +4,7 @@ var movement_speed = 2500
 
 @export var Goal: Node
 
-
+@export var speed_growth_slow_down: int
 
 func _ready() -> void:
 	scale = Vector2(0.5,0.5)
@@ -15,11 +15,10 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if scale.x < 1:
 		scale = Vector2(move_toward(scale.x, 1, 0.1),move_toward(scale.y, 1, 0.1) )
-	movement_speed += 1
-	if Global.time_passed == 30:
-		movement_speed += 100
-	if Global.time_passed == 60:
-		movement_speed += 100
+	movement_speed += 1 * ((Global.time_passed* Global.time_passed) - Global.time_passed*speed_growth_slow_down) * delta
+	print(movement_speed)
+
+	
 	
 	
 	
