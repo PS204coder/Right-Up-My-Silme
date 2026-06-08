@@ -150,7 +150,7 @@ script = ExtResource("1_i3pqv")
 
 [node name="animations" type="AnimatedSprite2D" parent="." unique_id=1453082557]
 sprite_frames = SubResource("SpriteFrames_dw050")
-animation = &"jump"
+animation = &"idle"
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1227293640]
 polygon = PackedVector2Array(5, 4, -5, 4, -6, 3, -6, -1, -5, -2, -3, -4, 3, -4, 5, -2, 6, -1, 6, 3)

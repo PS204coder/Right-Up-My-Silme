@@ -10,6 +10,7 @@ func _on_area_2d_body_entered(body: CharacterBody2D) -> void:
 
 func _on_animated_sprite_2d_animation_finished() -> void:
 	$Timer.start()
+	Global.time_to_beat_lvl.append(Global.time_passed)
 
 
 func _on_timer_timeout() -> void:

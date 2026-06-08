@@ -24,7 +24,6 @@ func _process(delta: float) -> void:
 	if not is_on_floor() and Global.player_died == false:
 		velocity += get_gravity() * delta * gravity_changer
 		jumping = false
-	print(animations.frame)
 	if is_on_floor():
 		wall_jump_available = 1
 	if animations.animation == "jump" and is_on_floor() and animations.is_playing() == false and Global.player_died == false:
@@ -101,7 +100,6 @@ func _on_wall_checker_right_body_exited(body: Node2D) -> void:
 func _on_animations_animation_finished() -> void:
 	if animations.animation == "die":
 		get_tree().reload_current_scene()
-
 
 func _on_timer_timeout() -> void:
 	Global.time_passed += 1

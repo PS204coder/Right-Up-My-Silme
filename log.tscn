@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://xn7q5t0x1ri4"]
+[gd_scene format=3 uid="uid://xn7q5t0x1ri4"]
 
 [ext_resource type="Script" uid="uid://i2ify2rq00vb" path="res://log.gd" id="1_f5jld"]
 [ext_resource type="Texture2D" uid="uid://bld4gv7qgxcim" path="res://graphicks/log_spin_001.png" id="2_b3n81"]
@@ -91,25 +91,25 @@ animations = [{
 radius = 8.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f5jld"]
-radius = 8.0
-height = 18.0
+radius = 8.5
+height = 17.0
 
-[node name="Log" type="RigidBody2D"]
+[node name="Log" type="RigidBody2D" unique_id=1859264075]
 z_index = -1
 gravity_scale = 0.5
 script = ExtResource("1_f5jld")
 direction_of_spin = -1
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=921852167]
 sprite_frames = SubResource("SpriteFrames_roy7y")
 animation = &"spin"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1136848352]
 shape = SubResource("CircleShape2D_hmsm3")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=992632039]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1530192453]
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_f5jld")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://h6maipphebjj"]
+[gd_scene format=3 uid="uid://h6maipphebjj"]
 
 [ext_resource type="Script" uid="uid://dbbf8uwfjdooc" path="res://spikes.gd" id="1_nrdsm"]
 [ext_resource type="Texture2D" uid="uid://xky0pi5esilp" path="res://graphicks/tileset.png" id="2_8fhau"]
@@ -18,18 +18,18 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ds4fp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_688ft"]
-size = Vector2(20, 4)
+size = Vector2(18, 4)
 
-[node name="Spikes" type="Node2D"]
+[node name="Spikes" type="Node2D" unique_id=1834247242]
 script = ExtResource("1_nrdsm")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2078694318]
 tile_map_data = PackedByteArray(0, 0, 255, 255, 255, 255, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 255, 255, 0, 0, 2, 0, 1, 0, 0, 0)
 tile_set = SubResource("TileSet_k4mtd")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1486923552]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1187967795]
 position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_688ft")
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cb11gvmpxysnp"]
+[gd_scene format=3 uid="uid://cb11gvmpxysnp"]
 
 [ext_resource type="Script" uid="uid://blhvdicfh27xb" path="res://finish.gd" id="1_o14cw"]
 [ext_resource type="Texture2D" uid="uid://utg28owuq0p0" path="res://graphicks/finish_001.png" id="2_j16b8"]
@@ -53,33 +53,33 @@ size = Vector2(14, 8)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2m2ul"]
 size = Vector2(14, 13)
 
-[node name="Finish" type="Node2D"]
+[node name="Finish" type="Node2D" unique_id=1753271962]
 script = ExtResource("1_o14cw")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=618811634]
 position = Vector2(0, -6)
 sprite_frames = SubResource("SpriteFrames_goijn")
 animation = &"finish"
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." unique_id=1999163905]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1801250914]
 position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_f4cds")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1736283772]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1034288748]
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_2m2ul")
 
-[node name="AudioWinSfx" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioWinSfx" type="AudioStreamPlayer2D" parent="." unique_id=2013780429]
 position = Vector2(0, -4)
 stream = ExtResource("11_o14cw")
 volume_db = 2.019
 max_distance = 59625.0
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=385331330]
 wait_time = 0.5
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
