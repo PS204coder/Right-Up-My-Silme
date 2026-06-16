@@ -122,7 +122,6 @@ position = Vector2(97, -224)
 [node name="Pathfinding thingi" parent="." unique_id=1976893190 node_paths=PackedStringArray("Goal") instance=ExtResource("5_ykrsh")]
 position = Vector2(153, -161)
 Goal = NodePath("../Player")
-speed_growth_slow_down = 1
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1369630968]
 visible = false
